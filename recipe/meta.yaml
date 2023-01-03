@@ -1,5 +1,5 @@
 {% set name = "cinemagoer" %}
-{% set version = "2022.12.4" %}
+{% set version = "2022.12.27" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cinemagoer-{{ version }}.tar.gz
-  sha256: 63006016752567c14e1a63a24190cfa44963228116b282303632f7279e9f4ae7
+  sha256: b94abfe948a3bfa92b04d09ae5fb41586fee60bb3fe692f20ce34bbc1a318d8a
 
 build:
   entry_points:
