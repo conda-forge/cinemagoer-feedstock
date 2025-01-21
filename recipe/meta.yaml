@@ -6,23 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cinemagoer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cinemagoer-{{ version }}.tar.gz
   sha256: 5ce1d77ae6546701618f11e5b1556a19d18edecad1b6d7d96973ec34941b18f2
 
 build:
   entry_points:
     - imdbpy = imdb.cli:main
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
     - lxml
-    - python >=3.6
+    - python >={{ python_min }}
     - sqlalchemy
 
 test:
@@ -33,6 +34,7 @@ test:
     - imdbpy --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://cinemagoer.github.io/
