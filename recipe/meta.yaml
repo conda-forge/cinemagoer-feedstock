@@ -1,13 +1,13 @@
 {% set name = "cinemagoer" %}
-{% set version = "2026.6.27" %}
+{% set version = "2026.8.20" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cinemagoer-{{ version }}.tar.gz
-  sha256: 0520db0e199cf4cecac79bedba92db797eb5ac553dc8ec183930ca1fbd4e91b2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/cinemagoer-{{ version }}.tar.gz
+  sha256: 99b99fe30582ddbfb08db0dd8af712bd55c11da7c3155e07a19ac6b5ecd677aa
 
 build:
   entry_points:
