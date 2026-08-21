@@ -22,9 +22,9 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - lxml
+    - lxml >=6.1.1
     - python >={{ python_min }}
-    - sqlalchemy
+    #- sqlalchemy
 
 test:
   imports:
