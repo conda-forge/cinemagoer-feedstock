@@ -42,7 +42,7 @@ about:
   summary: Python package to access the IMDb's database
   description: |
     Cinemagoer is a Python package useful to retrieve and manage the data of the IMDb (to which we are not affiliated in any way) movie database about movies, people, characters and companies
-  license: GPL-2.0-or-later
+  license: GPL-2.0-only
   dev_url: https://github.com/cinemagoer/cinemagoer
   doc_url: https://cinemagoer.readthedocs.io/
   license_file:
