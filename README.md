@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cinemagoer-feed
 
 Home: https://cinemagoer.github.io/
 
-Package license: GPL-2.0-or-later
+Package license: GPL-2.0-only
 
 Summary: Python package to access the IMDb's database
 
