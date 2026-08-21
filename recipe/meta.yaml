@@ -24,7 +24,8 @@ requirements:
   run:
     - lxml >=6.1.1
     - python >={{ python_min }}
-    #- sqlalchemy
+  run_constrained:
+    - sqlalchemy >=2.0.51,<2.1
 
 test:
   imports:
