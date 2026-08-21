@@ -1,13 +1,13 @@
 {% set name = "cinemagoer" %}
-{% set version = "2026.6.27" %}
+{% set version = "2026.8.20" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cinemagoer-{{ version }}.tar.gz
-  sha256: 0520db0e199cf4cecac79bedba92db797eb5ac553dc8ec183930ca1fbd4e91b2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/cinemagoer-{{ version }}.tar.gz
+  sha256: 99b99fe30582ddbfb08db0dd8af712bd55c11da7c3155e07a19ac6b5ecd677aa
 
 build:
   entry_points:
@@ -22,9 +22,10 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - lxml
+    - lxml >=6.1.1
     - python >={{ python_min }}
-    - sqlalchemy
+  run_constrained:
+    - sqlalchemy >=2.0.51,<2.1
 
 test:
   imports:
@@ -41,7 +42,7 @@ about:
   summary: Python package to access the IMDb's database
   description: |
     Cinemagoer is a Python package useful to retrieve and manage the data of the IMDb (to which we are not affiliated in any way) movie database about movies, people, characters and companies
-  license: GPL-2.0-or-later
+  license: GPL-2.0-only
   dev_url: https://github.com/cinemagoer/cinemagoer
   doc_url: https://cinemagoer.readthedocs.io/
   license_file:
